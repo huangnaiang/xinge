@@ -1,0 +1,23 @@
+{
+  "name": "xinge",
+  "version": "0.0.0",
+  "description": "xinge =====",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangnaiang/xinge.git"
+  },
+  "author": "huangnaiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huangnaiang/xinge/issues"
+  },
+  "homepage": "https://github.com/huangnaiang/xinge"
+}
