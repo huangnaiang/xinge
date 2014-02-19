@@ -51,7 +51,7 @@ XingeApp.queryDeviceCount(function(err, result){
 }); 
 
 //查询tag
-XingeApp.queryAppTags(0, 100, function(err, result){
+XingeApp.queryTags(0, 100, function(err, result){
 	console.log(result);
 });
 

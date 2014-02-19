@@ -1,4 +1,4 @@
 xinge
 =====
 
-腾讯信鸽(xg.qq.com) node API
+腾讯信鸽(xg.qq.com) Node API
