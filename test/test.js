@@ -36,7 +36,7 @@ XingeApp.pushToAllDevices(Xinge.DEVICE_TYPE_ANDROID, message, function(err, resu
 });
 
 //推送消息给指定tag
-XingeApp.pushByTags(Xinge.DEVICE_TYPE_IOS, ['123'], Xinge.TAG_OPERATION_OR, message, function(err, result){
+XingeApp.pushByTags(Xinge.DEVICE_TYPE_IOS, ['123', 'abc'], Xinge.TAG_OPERATION_OR, message, function(err, result){
 	console.log(result);
 });
 
