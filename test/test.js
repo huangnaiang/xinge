@@ -1,7 +1,7 @@
 var Xinge = require('../lib/Xinge');
 
-var accessId  = 2200002957;
-var secretKey = 'b406a22207c15f1278939d4e58e9dffe';
+var accessId  = 12324;
+var secretKey = 'b406a22207c15f1278939d4e58e9d';
 var XingeApp = new Xinge.XingeApp(accessId, secretKey);
 
 //Android message start.
@@ -35,9 +35,9 @@ iOSMessage.customContent = {
 //IOS message end.
 
 //推送消息给指定设备
-XingeApp.pushToSingleDevice('e3ab84d2d0673c8776bb831a093fe61bea2180639993fa734bb5f0a686188eb5', iOSMessage, function(err, result){
+XingeApp.pushToSingleDevice('e3ab84d2d0673c8776bb831a093fe61b5', iOSMessage, function(err, result){
 	console.log(result);
-}, exports.IOS_ENV_DEV);
+}, Xinge.IOS_ENV_DEV);
 
 //推送消息给指定账户或别名
 XingeApp.pushToSingleAccount(Xinge.DEVICE_TYPE_ALL, 'account', androidMessage, function(err, result){
@@ -47,7 +47,7 @@ XingeApp.pushToSingleAccount(Xinge.DEVICE_TYPE_ALL, 'account', androidMessage, f
 //推送消息给所有设备
 XingeApp.pushToAllDevices(Xinge.DEVICE_TYPE_ALL, iOSMessage, function(err, result){
 	console.log(result);
-}, exports.IOS_ENV_DEV);
+}, Xinge.IOS_ENV_DEV);
 
 //推送消息给指定tag
 XingeApp.pushByTags(Xinge.DEVICE_TYPE_IOS, ['av'], Xinge.TAG_OPERATION_OR, androidMessage, function(err, result){
