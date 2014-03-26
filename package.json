@@ -1,6 +1,6 @@
 {
   "name": "xinge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "腾讯信鸽消息推送 Node API",
   "main": "index.js",
   "directories": {
