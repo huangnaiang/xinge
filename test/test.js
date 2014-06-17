@@ -1,7 +1,7 @@
 var Xinge = require('../lib/Xinge');
 
 var accessId  = 2100032465;
-var secretKey = '1b81d728adf5a7d85388283b5e492e00';
+var secretKey = '1b81d728adf5a7d85388283b5e492e0';
 var XingeApp = new Xinge.XingeApp(accessId, secretKey);
 
 //Android message start.
@@ -63,7 +63,7 @@ XingeApp.queryPushStatus(['2824'], function(err, result){
 });
 
 //查询设备数量
-XingeApp.queryDeviceCount(function(err, result){
+XingeApp.queryDeviceNum(function(err, result){
 	console.log(result);
 });
 
@@ -84,5 +84,15 @@ XingeApp.setTags([['tag1','token1'], ['tag2','token2']], function(err, result){
 
 //批量删除标签
 XingeApp.deleteTags([['tag1','token1'], ['tag2','token2']], function(err, result){
+    console.log(result);
+});
+
+//根据设备token查询tag
+XingeApp.queryTagsByDeviceToken('token1', function(err, result){
+    console.log(result);
+});
+
+//根据tag查询设备数
+XingeApp.queryDeviceNumByTag('tag1', function(err, result){
     console.log(result);
 });
