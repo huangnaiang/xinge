@@ -1,12 +1,23 @@
 var Xinge = require('../lib/Xinge');
 
-var accessId  = 2100032465;
-var secretKey = '1b81d728adf5a7d85388283b5e492e0';
+var accessId  = 2100047050;
+var secretKey = '4326a2a1813a36e9a7d43c886e049ebc';
 var XingeApp = new Xinge.XingeApp(accessId, secretKey);
 
 //Android message start.
-var style = new Xinge.Style(0, 1, 1, 1, 0);
-var action = new Xinge.ClickAction(Xinge.ACTION_TYPE_BROWSER, null, 'http://xg.qq.com', 1);
+var style = new Xinge.Style();
+style.ring = 1;
+style.vibrate = 0;
+style.ringRaw = 'a';
+style.smallIcon = 'b';
+style.builderId = 77;
+
+var action = new Xinge.ClickAction();
+action.actionType = Xinge.ACTION_TYPE_PACKAGE_NAME;
+action.packageName.packageName = 'com.demo.xg';
+action.packageName.packageDownloadUrl = 'http://a.com';
+action.packageName.confirm = 1;
+
 var androidMessage = new Xinge.AndroidMessage();
 androidMessage.type = Xinge.MESSAGE_TYPE_NOTIFICATION;
 androidMessage.title = 'from av';
@@ -20,6 +31,8 @@ androidMessage.customContent = {
 	'name': 'huangnaiang'
 };
 androidMessage.multiPkg = 0;
+androidMessage.loopTimes = 3;
+androidMessage.loopInterval = 2;
 //And message end.
 
 //IOS message start.
@@ -32,6 +45,8 @@ iOSMessage.customContent = {
     key1: 'value1',
     key2: 'value2'
 };
+iOSMessage.loopTimes = 3;
+iOSMessage.loopInterval = 2;
 //IOS message end.
 
 //推送消息给指定设备
@@ -53,7 +68,7 @@ XingeApp.pushToAllDevices(Xinge.DEVICE_TYPE_ALL, androidMessage, function(err, r
 });
 
 //推送消息给指定tag
-XingeApp.pushByTags(Xinge.DEVICE_TYPE_IOS, ['av'], Xinge.TAG_OPERATION_OR, androidMessage, function(err, result){
+XingeApp.pushByTags(Xinge.DEVICE_TYPE_ALL, ['av'], Xinge.TAG_OPERATION_OR, iOSMessage, Xinge.IOS_ENV_DEV, function(err, result){
 	console.log(result);
 });
 
