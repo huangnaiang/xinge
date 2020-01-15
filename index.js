@@ -18,7 +18,8 @@ const {
   XingeTagOperatorType,
   XingeAccountOperatorType,
   XingeOpType,
-  XingeAccountType
+  XingeAccountType,
+  XingeAccountQueryType
 } = require('./lib/const/xinge_const')
 exports.XingeUrls = XingeUrls
 exports.XingeAudienceType = XingeAudienceType
@@ -33,3 +34,4 @@ exports.XingeTagOperatorType = XingeTagOperatorType
 exports.XingeAccountOperatorType = XingeAccountOperatorType
 exports.XingeOpType = XingeOpType
 exports.XingeAccountType = XingeAccountType
+exports.XingeAccountQueryType = XingeAccountQueryType
